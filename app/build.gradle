@@ -18,10 +18,17 @@ android {
     }
 
     buildTypes {
-        release {
+        debug{
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/2.0/\"")
         }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/2.0/\"")
+        }
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
