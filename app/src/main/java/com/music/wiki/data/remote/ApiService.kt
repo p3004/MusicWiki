@@ -1,6 +1,7 @@
 package com.music.wiki.data.remote
 
 import com.music.wiki.BuildConfig
+import com.music.wiki.data.model.TopGenre
 import com.music.wiki.data.model.TopTags
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
@@ -16,6 +17,6 @@ interface ApiService {
         @Query("method") method : String = "tag.getTopTags",
         @Query("api_key") api_key : String = BuildConfig.API_KEY,
         @Query("format") format : String = "json"
-    ) : Single<TopTags>
+    ) : Single<TopGenre>
 
 }

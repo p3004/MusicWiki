@@ -1,6 +1,7 @@
 package com.music.wiki.di.components
 
 import com.music.wiki.WikiApplication
+import com.music.wiki.data.remote.ApiService
 import com.music.wiki.di.modules.ApplicationModule
 import com.music.wiki.utils.network.NetworkHelper
 import com.music.wiki.utils.rx.SchedulerProvider
@@ -22,5 +23,7 @@ interface ApplicationComponent {
     fun getSchedulerProvider() : SchedulerProvider
 
     fun getCompositeDisposable() : CompositeDisposable
+
+    fun getApiService() : ApiService
 
 }
