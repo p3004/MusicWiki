@@ -3,6 +3,7 @@ package com.music.wiki.di.modules
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.music.wiki.data.repository.TopGenreRepository
+import com.music.wiki.di.ActivityScope
 import com.music.wiki.ui.genres.main.MainViewModel
 import com.music.wiki.utils.ViewModelProviderFactory
 import com.music.wiki.utils.network.NetworkHelper
@@ -19,6 +20,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 class ActivityModule(private val activity: AppCompatActivity) {
 
     @Provides
+    @ActivityScope
     fun provideMainViewModel(
         networkHelper: NetworkHelper,
         topGenreRepository: TopGenreRepository,
