@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.music.wiki.data.repository.TopGenreRepository
 import com.music.wiki.di.ActivityScope
 import com.music.wiki.ui.genres.main.MainViewModel
+import com.music.wiki.ui.genres.main.TopGenreAdapter
 import com.music.wiki.utils.ViewModelProviderFactory
 import com.music.wiki.utils.network.NetworkHelper
 import com.music.wiki.utils.rx.SchedulerProvider
@@ -18,6 +19,11 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 
 @Module
 class ActivityModule(private val activity: AppCompatActivity) {
+
+
+    @Provides
+    @ActivityScope
+    fun provideTopGenreAdapter() : TopGenreAdapter  = TopGenreAdapter()
 
     @Provides
     @ActivityScope
