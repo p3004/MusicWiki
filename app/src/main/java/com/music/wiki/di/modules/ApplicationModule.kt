@@ -1,6 +1,8 @@
 package com.music.wiki.di.modules
 
 import com.music.wiki.WikiApplication
+import com.music.wiki.data.remote.ApiService
+import com.music.wiki.data.remote.RetrofitNetworking
 import com.music.wiki.utils.network.NetworkHelper
 import com.music.wiki.utils.network.NetworkHelperImpl
 import com.music.wiki.utils.rx.RxSchedulerProvider
@@ -29,6 +31,8 @@ class ApplicationModule(private val application: WikiApplication) {
     @Provides
     fun provideCompositeDisposable(): CompositeDisposable = CompositeDisposable()
 
-
+    @Singleton
+    @Provides
+    fun provideApiService() : ApiService = RetrofitNetworking.create()
 
 }

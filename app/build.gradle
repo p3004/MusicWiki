@@ -20,13 +20,16 @@ android {
     buildTypes {
         debug{
             minifyEnabled false
-            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/2.0/\"")
+            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/\"")
+            buildConfigField("String","API_KEY",API_KEY)
         }
 
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/2.0/\"")
+            buildConfigField("String","BASE_URL","\"http://ws.audioscrobbler.com/\"")
+            buildConfigField("String","API_KEY",API_KEY)
+
         }
 
     }
