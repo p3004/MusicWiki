@@ -26,10 +26,10 @@
            android:gravity="center">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTopTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Punk Rock"
-                android:textColor="@color/cardview_dark_background"
                 android:gravity="center"/>
 
         </RelativeLayout>

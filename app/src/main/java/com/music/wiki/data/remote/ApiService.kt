@@ -12,7 +12,7 @@ import retrofit2.http.Query
  */
 interface ApiService {
 
-    @GET("")
+    @GET("2.0/")
     fun getTopTags(
         @Query("method") method : String = "tag.getTopTags",
         @Query("api_key") api_key : String = BuildConfig.API_KEY,

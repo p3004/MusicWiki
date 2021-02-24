@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.single_genre_item.view.*
  * Created by Pallab Banerjee on 2/23/2021.
  */
 class TopGenreAdapter :
-    ListAdapter<TopGenre, TopGenreAdapter.TopGenreViewHolder>(TopGenreDiffCallback()) {
+    ListAdapter<Tag, TopGenreAdapter.TopGenreViewHolder>(TopGenreDiffCallback()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopGenreViewHolder {
@@ -25,7 +25,7 @@ class TopGenreAdapter :
     }
 
     override fun onBindViewHolder(holder: TopGenreViewHolder, position: Int) {
-        holder.bind(getItem(position).toptags.tag[position])
+        holder.bind(getItem(position))
     }
 
     class TopGenreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -39,12 +39,12 @@ class TopGenreAdapter :
     }
 }
 
-private class TopGenreDiffCallback : DiffUtil.ItemCallback<TopGenre>() {
-    override fun areItemsTheSame(oldItem: TopGenre, newItem: TopGenre): Boolean {
-        return oldItem.toptags.tag == newItem.toptags.tag
+private class TopGenreDiffCallback : DiffUtil.ItemCallback<Tag>() {
+    override fun areItemsTheSame(oldItem: Tag, newItem: Tag): Boolean {
+        return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: TopGenre, newItem: TopGenre): Boolean {
+    override fun areContentsTheSame(oldItem: Tag, newItem: Tag): Boolean {
         return oldItem == newItem
     }
 
