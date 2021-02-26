@@ -8,7 +8,7 @@ import javax.inject.Inject
 /**
  * Created by Pallab Banerjee on 2/26/2021.
  */
-class GetTopArtistRepository @Inject constructor(private val apiService: ApiService) {
+class TopArtistRepository @Inject constructor(private val apiService: ApiService) {
 
     fun getTopArtist(tag : String) : Single<Artist> = apiService.getArtistList(tag = tag)
 
