@@ -2,8 +2,8 @@ package com.music.wiki.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.music.wiki.data.model.TopGenre
-import com.music.wiki.data.model.TopTags
+import com.music.wiki.data.model.top.TopGenre
+import com.music.wiki.data.model.top.TopTags
 import com.music.wiki.data.repository.TopGenreRepository
 import com.music.wiki.ui.genres.main.MainViewModel
 import com.music.wiki.utils.TestSchedulerProvider

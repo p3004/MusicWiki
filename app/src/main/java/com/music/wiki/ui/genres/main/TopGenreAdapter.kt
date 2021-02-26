@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textview.MaterialTextView
 import com.music.wiki.R
-import com.music.wiki.data.model.Tag
-import com.music.wiki.data.model.TopGenre
+import com.music.wiki.data.model.top.Tag
 import kotlinx.android.synthetic.main.single_genre_item.view.*
 
 

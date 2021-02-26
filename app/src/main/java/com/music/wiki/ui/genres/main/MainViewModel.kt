@@ -3,7 +3,7 @@ package com.music.wiki.ui.genres.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.music.wiki.data.model.TopGenre
+import com.music.wiki.data.model.top.TopGenre
 import com.music.wiki.data.repository.TopGenreRepository
 import com.music.wiki.utils.common.Resource
 import com.music.wiki.utils.network.NetworkHelper

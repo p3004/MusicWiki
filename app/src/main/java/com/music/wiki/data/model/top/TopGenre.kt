@@ -1,4 +1,4 @@
-package com.music.wiki.data.model
+package com.music.wiki.data.model.top
 
 import com.google.gson.annotations.SerializedName
 

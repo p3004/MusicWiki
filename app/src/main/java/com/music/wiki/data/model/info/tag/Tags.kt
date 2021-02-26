@@ -1,8 +1,9 @@
-package com.music.wiki.data.model
+package com.music.wiki.data.model.info.tag
 
 import com.google.gson.annotations.SerializedName
 
-data class TopTags(
+
+data class Tags(
     @SerializedName("tag")
-    val tag: List<Tag>
+    val tag: Tag
 )

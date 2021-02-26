@@ -1,7 +1,7 @@
 package com.music.wiki.data.repository
 
-import com.music.wiki.data.model.TopGenre
-import com.music.wiki.data.model.TopTags
+import com.music.wiki.data.model.top.TopGenre
+import com.music.wiki.data.model.top.TopTags
 import com.music.wiki.data.remote.ApiService
 import io.reactivex.rxjava3.core.Single
 import org.junit.Before

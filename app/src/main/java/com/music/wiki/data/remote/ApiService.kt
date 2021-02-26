@@ -1,8 +1,7 @@
 package com.music.wiki.data.remote
 
 import com.music.wiki.BuildConfig
-import com.music.wiki.data.model.TopGenre
-import com.music.wiki.data.model.TopTags
+import com.music.wiki.data.model.top.TopGenre
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -18,5 +17,7 @@ interface ApiService {
         @Query("api_key") api_key : String = BuildConfig.API_KEY,
         @Query("format") format : String = "json"
     ) : Single<TopGenre>
+
+
 
 }
