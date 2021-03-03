@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.genres.detail.GenreDetailActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBackToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGenreNameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivBackToMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="35sp"
+        android:text="Rock"
+        android:textStyle="bold"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGenreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvGenreNameDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:maxHeight="150dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis gravida leo, sed faucibus turpis ornare in. Praesent vestibulum urna tortor, sit amet efficitur leo dictum non. Ut vestibulum pharetra accumsan. Mauris lobortis lectus a sem fringilla, ac venenatis orci dapibus. Aenean a porttitor nisi, vel posuere lorem. Duis sit amet dolor mattis, lobortis leo eu, consequat ante. Aenean nulla ex, euismod quis odio in, sagittis placerat arcu. Sed dapibus molestie luctus. Phasellus eu gravida sem, eget blandit nisl. Nam rhoncus massa at imperdiet faucibus. Maecenas ut leo semper, vehicula elit ac, hendrerit turpis. Aenean nec nibh id ligula pulvinar rutrum. Curabitur id nisl sed metus dignissim tempor. Ut ornare arcu at nunc viverra pretium. Integer vitae tempus enim, eget fringilla odio. Cras sit amet sem id eros maximus dignissim."
+        android:gravity="center"
+        android:scrollbars="vertical"
+        />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpGenreDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGenreInfo"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
